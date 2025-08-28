@@ -3,12 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import sqlite3
+import time
 
 from langchain_ollama import OllamaLLM
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from vector import retriever
-
 
 app = FastAPI()
 
@@ -44,6 +44,7 @@ chain = prompt | model
 
 @app.post("/search")
 async def search_recipes(payload: SearchQuery):
+    start = time.time()
     query = payload.query
 
     if not query:
@@ -63,6 +64,8 @@ async def search_recipes(payload: SearchQuery):
             "title": title.strip(),
             "description": description.strip(),
         })
+    elapsed = (time.time() - start) * 1000 # in milliseconds
+    print(f"Search for '{query}' took {elapsed:.2f} ms and returned {len(results)} results.")
 
     return JSONResponse(content={"results": results})
 

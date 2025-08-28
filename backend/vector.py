@@ -6,7 +6,6 @@ import os
 
 raw_recipes_path = os.path.expanduser("~/.cache/kagglehub/datasets/shuyangli94/food-com-recipes-and-user-interactions/versions/2/RAW_recipes.csv")
 df = pd.read_csv(raw_recipes_path)
-df = df.head(1000)
 
 print(f"Recipes loaded: {len(df):,}")
 
