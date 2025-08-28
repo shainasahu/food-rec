@@ -12,7 +12,7 @@ An AI-powered recipe search and Q&A app built on Kaggle’s Food.com dataset, co
 
 It connects keyword-based search with a vector embedding pipeline, enabling semantic recipe discovery. Each recipe is enriched with metadata (ingredients, steps, nutrition, tags), stored in SQLite, and indexed with ChromaDB for fast retrieval.
 
-Additionally, a chatbot interface powered by **LangChain + Ollama** allows users to ask natural language questions about a recipe — e.g. *“Can I make this gluten-free?”* or *“What substitutions work for garlic?”*—and get contextual answers grounded in the recipe’s details.
+Additionally, a chatbot interface powered by LangChain + Ollama allows users to ask natural language questions about a recipe — like “Can I make this gluten-free?” or “What substitutions work for garlic?” — and get contextual answers grounded in the recipe’s details.
 
 ---
 
@@ -27,7 +27,7 @@ Additionally, a chatbot interface powered by **LangChain + Ollama** allows users
 ### Features 📖
 
 - **Vector-powered search** – Search by keywords or semantic meaning across thousands of recipes.  
-- **Fast retrieval** – Recipes stored in **ChromaDB** with embeddings for quick, relevant results.  
+- **Fast retrieval** – Recipes stored in ChromaDB with embeddings for quick, relevant results.  
 - **Rich recipe details** – Each recipe includes description, tags, nutrition, ingredients, and step-by-step instructions.  
 - **Interactive chatbot** – Ask recipe-specific questions and get contextual, LLM-generated answers.  
 - **Efficient storage** – Recipes and metadata stored in SQLite for lightweight but powerful querying.
@@ -62,7 +62,7 @@ Additionally, a chatbot interface powered by **LangChain + Ollama** allows users
 
 ### Future Work ⭐ 
 
-- Add **advanced filtering** (tags, nutrition, dietary preferences).  
-- Expand beyond the current **subset of recipes** (demo uses ~1,000 for speed).  
-- Improve **UI/UX** for browsing and search.  
-- Experiment with **larger/better embeddings & models** for more accurate search and answers.
+- Add advanced filtering (tags, nutrition, dietary preferences).  
+- Expand beyond the current subset of recipes (demo uses ~1,000 for speed).  
+- Improve UI/UX for browsing and search.  
+- Experiment with larger/better embeddings & models for more accurate search and answers.
